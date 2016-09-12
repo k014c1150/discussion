@@ -8,7 +8,7 @@
 	<body>
 	<div class=room>
 		<h1>Spechen</h1>
-		<form action="lobby.html" method="post">
+		<form action="lobby.php" method="post">
 		<p>
 		名前
 		<input type="text"id="name" name="name" size="30" maxlength="10" value="">
