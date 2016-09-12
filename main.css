@@ -1,0 +1,21 @@
+body {
+    position:relative; /* 絶対配置の基準点 */
+    width:100%; /* 1000px以下は幅いっぱいに広げる */
+    max-width:1000px; /* 最大幅の指定 */
+    height:300px; /* 高さの指定 */
+    margin:0 auto; /* ブロック要素の中央揃え */
+    text-align:center; /* インライン要素の中央揃え */
+    background:#fff; /* 背景色 */
+}
+body .room {
+    position:absolute; /* 絶対配置 */
+    top:50%; /* 上から半分 */
+    left:50%; /* 左から半分 */
+    width:100%; /* 大枠と同じ幅に */
+    margin:-1.5em 0 0 -50%; /* 要素の大きさの半分引く */
+}
+
+h1{
+	padding-top="20px";
+}
+
