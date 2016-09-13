@@ -27,7 +27,7 @@
 			<?php if($room_state[$i] == -1){ ?>
 			<tr>
 				<td> 
-				<button type="submit" name="example" value="<?php echo $room_name[$i]; ?>"><?php echo $room_name[$i]; ?></button>
+				<button type="submit" name="example" class="btnroom" value="<?php echo $room_name[$i]; ?>"><?php echo $room_name[$i]; ?></button>
 				</td>
 				<td>
 				ディスカッション中です。<?php echo $ROOM_TIME[$room_type[$i]]; ?>分後に終了します。
