@@ -5,9 +5,14 @@
 		<style></style>
 		<title>メイン画面</title>
 	<script type="text/javascript">
+		//設定時間　１５分or30分　
 		var time=10;
+		//６０秒
 		var sec=0;
+		//残り時間
 		var mini=1;
+
+		//時計の実装
 		function set2fig(num) {
 		   // 桁数が1桁だったら先頭に0を加えて2桁に調整する
 		   var ret;
@@ -34,8 +39,16 @@
 		   }
 		}
 		function autoLink(){
+			saveContent();
 			document.giziroku.submit();
 		}
+		function saveContent(){//セッションストレージに保存
+			var textContent = document.getElementById("textarea");
+			var key = "saveeditor";
+			var value = textContent.innerText;
+			window.sessionStorage.setItem(key, value);
+		}
+
 		setInterval('showClock2()',1000);
 	</script>
 
@@ -68,7 +81,7 @@
 
 		<p>議事録</p>
 		<form action="dl.php" method="post" name="giziroku">
-			<textarea name="memo" class="memo" rows="30" cols="125"></textarea>
+			<textarea name="memo" class="memo" rows="30" cols="125" id="textarea"></textarea>
 		</form>
 		</div>
 	</body>
