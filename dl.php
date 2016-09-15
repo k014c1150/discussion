@@ -10,14 +10,19 @@
 		<p>ディスカッションが終了しました。お疲れさまでした</p>
 		<a href="aaa.txt">議事録のダウンロード</a><br>
 		<button type="submit" name="end" value="end">戻る</button>
-	</div>
-<?php
-$file = "test.txt";
-header("Content-Type: application/octet-stream");
-header("Content-Disposition: attachment; filename=$file");
-readfile($file);
-exit;
-?>
+<script>
+function loadContent(){
+var loaded = window.sessionstorage.getItem("saveeditor");
+document.getElementById("textarea").innerText = loaded;
+clssw = 1;
+}
+
+</script>
+</div>
+<input type="button" name="loadbtn" value="load" onclick="loadContent()" />
+
+
+
 	</body>
 
 </html>
