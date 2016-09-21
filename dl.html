@@ -1,16 +1,37 @@
 <html>
 	<head>
+		<meta charset="UTF-8">
+		<meta http-equiv="content-language" content="ja">
 		<link rel="stylesheet" type="text/css" href="main.css">
 		<style>
 		</style>
-		<title>‚c‚k</title>
+		<title>ï¼¤ï¼¬</title>
 	</head>
 	<body>
 	<div class=room>
-		<p>ƒfƒBƒXƒJƒbƒVƒ‡ƒ“‚ªI—¹‚µ‚Ü‚µ‚½B‚¨”æ‚ê‚³‚Ü‚Å‚µ‚½</p>
-		<a href="aaa.txt">‹c–˜^‚Ìƒ_ƒEƒ“ƒ[ƒh</a><br>
-		<button type="submit" name="end" value="end">–ß‚é</button>
+		<p>ãƒ‡ã‚£ã‚¹ã‚«ãƒƒã‚·ãƒ§ãƒ³ãŒçµ‚äº†ã—ã¾ã—ãŸã€‚ãŠç–²ã‚Œã•ã¾ã§ã—ãŸ</p>
+		<a href = "" id ="DLlink" download = "è­°äº‹éŒ².txt">
+			è­°äº‹éŒ²ã®ãƒ€ã‚¦ãƒ³ãƒ­ãƒ¼ãƒ‰</ button><br>
+	<script>
+
+	function loadContent(){
+	var loaded = window.sessionStorage.getItem("saveeditor");
+	document.getElementById("textarea").innerText = loaded;
+	clssw = 1;
+	}
+	document.querySelector('#DLlink').onclick = function() {
+	    var text =  window.sessionStorage.getItem("saveeditor");
+	    this.href = 'data:text/plain;charset=utf-8,'
+	        + encodeURIComponent(text);
+	};
+	</script>
 	</div>
+	<div id="textarea" contenteditable="true" onclick="cleartextarea()">
+
+</div>
+	
+
+
 	</body>
 
 </html>
